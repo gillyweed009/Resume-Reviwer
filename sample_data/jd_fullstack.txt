@@ -1,0 +1,44 @@
+Software Engineer - Full Stack
+TechCorp Solutions
+
+About the Role:
+We are looking for a talented Full Stack Developer to join our growing engineering team. You will work on building scalable web applications and contribute to our product development.
+
+Required Skills:
+- Strong proficiency in JavaScript and Python
+- Experience with React and Node.js
+- Knowledge of SQL databases (PostgreSQL or MySQL)
+- Understanding of REST APIs and microservices
+- Git version control
+- Experience with Agile development
+
+Preferred Skills:
+- Experience with AWS or other cloud platforms
+- Knowledge of Docker and containerization
+- Familiarity with CI/CD pipelines
+- Experience with MongoDB or NoSQL databases
+- TypeScript experience
+
+Experience Required:
+0-2 years of professional experience (Fresh graduates welcome)
+
+Education:
+Bachelor's degree in Computer Science, Engineering, or related field
+
+Responsibilities:
+- Develop and maintain web applications using React and Node.js
+- Write clean, maintainable, and efficient code
+- Collaborate with cross-functional teams
+- Participate in code reviews and technical discussions
+- Debug and troubleshoot application issues
+- Contribute to technical documentation
+
+What We Offer:
+- Competitive salary
+- Health insurance
+- Learning and development opportunities
+- Flexible work environment
+- Modern tech stack
+
+Location: Bangalore, India
+Employment Type: Full-time

@@ -1,0 +1,45 @@
+Data Scientist
+DataTech Analytics
+
+Job Description:
+We are seeking a passionate Data Scientist to join our analytics team. You will work on machine learning projects, data analysis, and building predictive models.
+
+Required Skills:
+- Strong programming skills in Python
+- Experience with Machine Learning libraries (Scikit-learn, TensorFlow, or PyTorch)
+- Proficiency in data analysis with Pandas and NumPy
+- Knowledge of SQL and database querying
+- Understanding of statistics and probability
+- Data visualization skills (Matplotlib, Seaborn, or Plotly)
+- Experience with Jupyter notebooks
+
+Preferred Skills:
+- Experience with Deep Learning
+- Knowledge of AWS or GCP for ML deployment
+- Familiarity with big data tools (Spark, Hadoop)
+- Experience with A/B testing
+- Knowledge of MLOps practices
+- R programming language
+
+Experience Required:
+0-1 years (Fresh graduates with strong academic projects welcome)
+
+Education:
+Bachelor's or Master's degree in Computer Science, Statistics, Mathematics, or related field
+
+Responsibilities:
+- Build and deploy machine learning models
+- Analyze large datasets to extract insights
+- Create data visualizations and reports
+- Collaborate with product and engineering teams
+- Conduct statistical analysis and hypothesis testing
+- Document methodologies and findings
+
+Requirements:
+- Strong analytical and problem-solving skills
+- Good communication skills
+- Ability to work in a team environment
+- Portfolio of data science projects (academic or personal)
+
+Location: Remote / Pune
+Employment Type: Full-time

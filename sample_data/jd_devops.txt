@@ -1,0 +1,54 @@
+DevOps Engineer
+CloudScale Systems
+
+Position: DevOps Engineer (Entry Level)
+
+About Us:
+CloudScale Systems is a fast-growing cloud infrastructure company. We're looking for a motivated DevOps Engineer to help automate and streamline our operations.
+
+Required Skills:
+- Experience with Linux/Unix systems
+- Knowledge of Docker and containerization
+- Understanding of CI/CD concepts
+- Familiarity with Git and version control
+- Basic scripting skills (Python or Bash)
+- Understanding of networking fundamentals
+- Experience with at least one cloud platform (AWS, Azure, or GCP)
+
+Preferred Skills:
+- Kubernetes experience
+- Infrastructure as Code (Terraform or Ansible)
+- Jenkins or GitLab CI experience
+- Monitoring tools (Prometheus, Grafana)
+- Database administration basics
+- Agile methodologies
+
+Experience Required:
+0-2 years (Fresh graduates with relevant internships or projects considered)
+
+Education:
+B.Tech/B.E. in Computer Science or related field
+
+Key Responsibilities:
+- Maintain and improve CI/CD pipelines
+- Automate deployment processes
+- Monitor system performance and reliability
+- Troubleshoot infrastructure issues
+- Implement security best practices
+- Collaborate with development teams
+- Document processes and procedures
+
+What You'll Learn:
+- Advanced cloud architecture
+- Container orchestration at scale
+- Infrastructure automation
+- Site reliability engineering practices
+
+Benefits:
+- Competitive compensation
+- Cloud certifications sponsored
+- Mentorship program
+- Flexible hours
+
+Location: Hyderabad
+Type: Full-time
