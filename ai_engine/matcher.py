@@ -167,20 +167,26 @@ class Matcher:
     def _generate_recommendation(self, score: float, skill_comparison: Dict) -> str:
         """Generate actionable recommendation based on score"""
         missing_count = len(skill_comparison.get('missing_skills', []))
+        matched_count = skill_comparison.get('matched_count', 0)
+        match_percentage = skill_comparison.get('match_percentage', 0)
         
         if score >= 85:
-            return "Strong candidate! Apply with confidence. Highlight your matching skills prominently in your application."
+            return "🎯 **Excellent Match!** You're a strong candidate. Apply with confidence and highlight your matching skills in your cover letter."
         elif score >= 70:
             if missing_count <= 2:
-                return "Good match! Consider learning the missing skills quickly or emphasize transferable skills in your application."
+                return f"✅ **Good Match!** You meet most requirements. Consider learning the {missing_count} missing skill(s) or emphasize transferable skills."
             else:
-                return "Decent fit, but focus on acquiring the key missing skills before applying for best results."
+                return f"⚠️ **Decent Fit** but you're missing {missing_count} skills. Focus on acquiring 2-3 key skills before applying for best results."
         elif score >= 55:
-            return f"Moderate fit. You're missing {missing_count} key skills. Invest 2-4 weeks in learning these before applying."
+            return f"📚 **Moderate Fit** - Missing {missing_count} key skills. Invest 2-4 weeks learning these before applying."
         elif score >= 40:
-            return f"Significant skill gaps detected. Consider this role as a stretch goal and focus on building foundational skills first."
+            return f"⚡ **Below Average Fit** - Significant skill gaps ({missing_count} critical skills missing). This is a stretch role. Build foundational skills first."
         else:
-            return "This role may not be the best fit right now. Focus on roles that better match your current skill set."
+            # Poor fit - be very clear about the situation
+            if matched_count == 0:
+                return f"❌ **Poor Fit** - No matching skills found. You're missing all {missing_count} required skills. This role requires significant upskilling (2-3 months minimum)."
+            else:
+                return f"❌ **Poor Fit** - Only {matched_count}/{missing_count + matched_count} skills match. This role doesn't align with your current profile. Consider roles that better match your skillset."
 
 
 def calculate_match(resume_data: Dict, jd_data: Dict, resume_skills: Dict, 

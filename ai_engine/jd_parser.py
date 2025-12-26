@@ -69,6 +69,24 @@ class JDParser:
             if re.search(pattern, search_text, re.IGNORECASE):
                 skills.add(skill)
         
+        # Also extract common technical patterns (fallback for skills not in our list)
+        # Look for capitalized technical terms, acronyms, and common patterns
+        technical_patterns = [
+            r'\b[A-Z]{2,}(?:\.[A-Z]+)*\b',  # Acronyms like AWS, CI/CD, REST
+            r'\b(?:Node|React|Angular|Vue|Django|Flask|Spring|Laravel|Rails)(?:\.js|JS)?\b',  # Frameworks
+            r'\b(?:Python|Java|JavaScript|TypeScript|Go|Rust|C\+\+|Ruby|PHP|Swift|Kotlin)\b',  # Languages
+            r'\b(?:SQL|NoSQL|MongoDB|PostgreSQL|MySQL|Redis|Elasticsearch)\b',  # Databases
+            r'\b(?:Docker|Kubernetes|Jenkins|Git|CI/CD|DevOps|Agile|Scrum)\b',  # Tools
+        ]
+        
+        for pattern in technical_patterns:
+            matches = re.findall(pattern, search_text)
+            for match in matches:
+                # Normalize and add
+                normalized = match.strip().lower()
+                if len(normalized) > 1:  # Avoid single letters
+                    skills.add(match)  # Keep original case for display
+        
         return sorted(list(skills))
     
     def _extract_preferred_skills(self) -> List[str]:

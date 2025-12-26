@@ -75,11 +75,12 @@ st.markdown("""
         color: #991b1b;
     }
     .recommendation-box {
-        background-color: #f3f4f6;
+        background-color: rgba(102, 126, 234, 0.1);
         padding: 1.5rem;
         border-radius: 10px;
         border-left: 4px solid #667eea;
         margin: 1rem 0;
+        color: inherit;
     }
     .stTabs [data-baseweb="tab-list"] {
         gap: 2rem;
@@ -219,6 +220,15 @@ def main():
                 # Clean up
                 os.remove(temp_resume_path)
                 
+                # DEBUG: Show what was extracted
+                with st.expander("🔍 Debug Info - What was extracted"):
+                    st.write("**Resume Skills Found:**", resume_skills.get('all_skills', []))
+                    st.write("**JD Skills Found:**", jd_skills.get('required_skills', []))
+                    st.write("**Skill Comparison:**", skill_comparison)
+                
+                # Success message
+                st.success("✅ Analysis Complete!")
+                
                 # Display results
                 display_results(
                     match_result, skill_comparison, gap_analysis, 
@@ -270,7 +280,7 @@ def display_overview(match_result, skill_comparison):
     
     # Metrics row
     st.markdown("### 📈 Quick Stats")
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4 = st.columns([1, 1, 1, 1.5])
     
     with col1:
         st.metric("Overall Score", f"{match_result['overall_score']}%")
@@ -319,7 +329,7 @@ def display_skills_analysis(skill_comparison, resume_skills, jd_skills):
         ])
         st.markdown(skills_html, unsafe_allow_html=True)
     else:
-        st.info("No matched skills found")
+        st.warning("⚠️ No matched skills found - you may need significant upskilling for this role")
     
     st.markdown("---")
     
@@ -339,8 +349,8 @@ def display_gap_analysis(gap_analysis):
     
     st.markdown(f"### {gap_analysis['gap_summary']}")
     
+    
     if gap_analysis['total_gaps'] == 0:
-        st.balloons()
         st.success("🎉 Congratulations! You're an excellent match for this role!")
         return
     
